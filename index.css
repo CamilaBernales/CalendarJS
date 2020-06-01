@@ -1,0 +1,62 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar {
+  padding: 20px 10px;
+  background-color: #000000;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 300px;
+  font-family: sans-serif;
+}
+.calendar_header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.calendar .control {
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 5px;
+}
+.grid_header,
+.grid_body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.grid_header {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.grid_body {
+  color: rgb(250, 250, 250);
+  grid-auto-rows: 40px;
+}
+.grid_cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid_cell--gd:hover {
+  cursor: pointer;
+}
+.grid_cell--selected {
+  color: #000000;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px #000000 inset;
+}
+.grid_cell--disabled{
+    color: #424649;
+    cursor: not-allowed;
+}
